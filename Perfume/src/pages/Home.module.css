@@ -1,0 +1,96 @@
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-elevated) 50%, #1a1714 100%);
+  background-image: 
+    linear-gradient(to bottom, rgba(13, 12, 11, 0.7) 0%, var(--bg) 100%),
+    url('https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1600');
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, var(--bg) 90%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btnPrimary {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-dim);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btnOutline:hover {
+  background: rgba(201, 169, 98, 0.12);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+  text-align: center;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.ctaWrap {
+  text-align: center;
+}
